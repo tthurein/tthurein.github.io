@@ -16,7 +16,9 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 		<script src="phaser.min.js"></script>
-
+		var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {
+     		 preload: preload, create: create, update: update
+    		});
 		function sketch() {}
     		function Bird() {}
     		function Pipe() {}
@@ -182,6 +184,7 @@
     									function Pipe() {}
 											</script>
 									...
+									....
 									
 									</p>
 
