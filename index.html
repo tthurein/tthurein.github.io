@@ -15,6 +15,7 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
+		<script src="js/phaser.min.js"></script>
 
 		<script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
   	<script language="javascript" src="libraries/p5.dom.js"></script>
@@ -169,6 +170,14 @@
 								<article id="game">
 									<h2 class="major">JS game</h2>
 									<p>
+										<script>
+    									var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {
+      								preload: preload, create: create, update: update
+    									});
+    									function sketch() {}
+    									function Bird() {}
+    									function Pipe() {}
+											</script>
 									...
 									....
 									</p>
