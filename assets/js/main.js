@@ -71,8 +71,8 @@
 
 for (var i = 0; i < x; i++) {
   stars.push({
-    x: Math.random() * window.width,
-    y: Math.random() * window.height,
+    x: Math.random() * $window.width,
+    y: Math.random() * $window.height,
     radius: Math.random() * 1 + 1,
     vx: Math.floor(Math.random() * 50) - 25,
     vy: Math.floor(Math.random() * 50) - 25
@@ -82,7 +82,7 @@ for (var i = 0; i < x; i++) {
 // Draw the scene
 
 function draw() {
-  ctx.clearRect(0,0,window.width,window.height);
+  ctx.clearRect(0,0,$window.width,$window.height);
   
   ctx.globalCompositeOperation = "lighter";
   
@@ -137,12 +137,12 @@ function update() {
     s.x += s.vx / FPS;
     s.y += s.vy / FPS;
     
-    if (s.x < 0 || s.x > window.width) s.vx = -s.vx;
-    if (s.y < 0 || s.y > window.height) s.vy = -s.vy;
+    if (s.x < 0 || s.x > $window.width) s.vx = -s.vx;
+    if (s.y < 0 || s.y > $window.height) s.vy = -s.vy;
   }
 }
 
-window.addEventListener('mousemove', function(e){
+$window.addEventListener('mousemove', function(e){
   mouse.x = e.clientX;
   mouse.y = e.clientY;
 });
