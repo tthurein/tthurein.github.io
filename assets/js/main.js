@@ -58,21 +58,6 @@
 				}).triggerHandler('resize.flexbox-fix');
 
 			}
-		
-$window.addEventListener('mousemove', function(e){
-  mouse.x = e.clientX;
-  mouse.y = e.clientY;
-});
-
-// Update and draw
-
-function tick() {
-  draw();
-  update();
-  requestAnimationFrame(tick);
-}
-
-tick();
 
 		// Nav.
 			var $nav = $header.children('nav'),
